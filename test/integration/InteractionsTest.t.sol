@@ -45,9 +45,4 @@ contract InteractionsTest is Test {
 
         assert(address(fundMe).balance == 0);
     }
-
-
-
-   
-
 }
