@@ -18,7 +18,7 @@ build :; forge build
 
 anvil:;  anvil -m 'test test test test test test test test test test test junk' --steps-tracing --block-time 1
 
-deploy:; forge script script/DeployFundMe.s.sol:DeployStuff --broadcast --rpc-url http://localhost:8545  --private-key $(DEFAULT_ANVIL_KEY)   -vvvv 
+deploy:; forge script script/DeployFundMe.s.sol:DeployFundMe --broadcast --rpc-url http://localhost:8545  --private-key $(DEFAULT_ANVIL_KEY)   -vvvv 
 
 interact:; forge script script/InteractWithStuff.s.sol:InteractWithStuff --broadcast --rpc-url http://localhost:8545  --private-key $(DEFAULT_ANVIL_KEY)   -vvvv 
 
