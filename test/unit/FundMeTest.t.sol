@@ -22,11 +22,11 @@ contract FundMeTest is Test {
         fundMe = deployFundMe.run();
     }
 
-    function testMinimumDollarIsFive() public {
+    function testMinimumDollarIsFive() public view {
         assertEq(fundMe.MINIMUM_USD(), 5e18);
     }
 
-    function testOwnerIsMsgSender() public {
+    function testOwnerIsMsgSender() public view {
         // test i_owner == fundMeTest using address(this)
         assertEq(fundMe.getOwner(), msg.sender);
     }
@@ -84,7 +84,7 @@ contract FundMeTest is Test {
 
         // Assert
         uint256 endingOwnerBalance = fundMe.getOwner().balance;
-        uint256 endingFundMeBalance = address(fundMe).balance;
+        address(fundMe).balance;
         assertEq(address(fundMe).balance, 0);
         assertEq(startingOwnerBalance + startingFundMeBalance, endingOwnerBalance);
     }
